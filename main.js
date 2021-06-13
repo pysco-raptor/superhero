@@ -85,3 +85,55 @@ if(keyPressed == '70') { new_image('https://i.postimg.cc/hGnyTPLB/ironman-face.p
   console.log("h");
  }
 }
+
+function up(){
+    if(player_y >=0)
+    {
+        player_y=player_y-block_image_height;
+        console.log("block_image_height="+block_image_height);
+        console.log ("when up arrow is pressed,x= "+player_x+"y="+player_y);
+        canvas.remove(player_object);
+        player_update();
+        
+    }
+    
+    }
+    function down(){
+        if(player_y <=500)
+        {
+    
+            player_y=player_y+block_image_height;
+            console.log("block_image_height="+block_image_height);
+            console.log ("when down arrow is pressed,x= "+player_x+"y="+player_y);
+            canvas.remove(player_object);
+            player_update();
+            
+        }
+    }
+        function right(){
+            if(player_x <=850)
+            {
+                player_x=player_x+block_image_width;
+                console.log("block_image_width="+block_image_width);
+                console.log ("when right arrow is pressed,x= "+player_x+"y="+player_y);
+                canvas.remove(player_object);
+                player_update();
+                
+            }
+        }
+            function left(){
+                if(player_x >0)
+                {
+                    player_x=player_x-block_image_width;
+                    console.log("block_image_width="+block_image_width);
+                    console.log ("when left arrow is pressed,x= "+player_x+"y="+player_y);
+                    canvas.remove(player_object);
+                    player_update();
+                    
+                }
+            }
+            
+        
+    
+    
+    
